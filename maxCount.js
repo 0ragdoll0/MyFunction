@@ -10,12 +10,11 @@ function maxCount(str){
     }
     var mostchar=str.charAt(0);
     var maxcount=charjson[str.charAt(0)];
-    for(let i=0;i<len;i++){
-        if(charjson[str.charAt(i)]>maxcount){
-            mostchar=str.charAt(i);
-            maxcount=charjson[str.charAt(i)]
+    for(var k in charjson){
+        if(charjson[k]>maxcount){
+            mostchar=k;
+            maxcount=charjson[k];
         }
-        
     }
     return mostchar+" "+maxcount;
 }
