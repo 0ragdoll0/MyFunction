@@ -24,3 +24,6 @@ console.log("原数组："+inputarray);
 var result=inputarray.distinct();
 console.log("去重后数组:"+inputarray);
 console.log("删除项数组:"+result);
+
+console.log([8,3,4,5,4,3]);
+console.log(Array.from(new Set([8,3,4,5,4,3])))

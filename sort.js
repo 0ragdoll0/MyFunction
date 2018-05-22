@@ -79,6 +79,22 @@ function bubbleSort(array){
     return result;
 }
 
+function qSort(arr){
+    if(arr.length==0){
+        return [];
+    }
+    let pivot=arr[0];
+    let left=[];
+    let right=[];
+    for(let i=1;i<arr.length;i++){
+        if(arr[i]<pivot){
+            left.push(arr[i])
+        }else{
+            right.push(arr[i]);
+        }
+    }
+    return qSort(left).concat(pivot,qSort(right));
+}
 console.log(array);
-console.log(bubbleSort(array));
-console.log(array);
+console.log(qSort(array));
+// console.log(array);
